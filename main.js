@@ -17,7 +17,7 @@
   addButton.addEventListener("click", event => {
     const todo = textBox.value;
     textBox.value = "";
-    if (todo) {
+    if (todo && todo.match(/\S/g)) {
       todos.push(todo);
       showTodo();
     }
